@@ -22,6 +22,7 @@ function FormHandling() {
         onSubmit(e);
       }}
     >
+      <legend>Example form</legend>
       <div>
         <label className="form-label" htmlFor="firstName">
           First Name :{" "}
