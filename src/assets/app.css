@@ -1,0 +1,11 @@
+button + button {
+    margin-left: 0.5rem;
+}
+
+input + button {
+    margin-left: 0.5rem;
+}
+
+li + li {
+    margin-top: 0.5rem;
+}
