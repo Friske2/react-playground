@@ -1,4 +1,5 @@
 import { Lookup } from "../types";
+import FieldCheckbox from "./FieldCheckbox";
 type TypeCheckboxProps = {
   value: (string | number)[];
   prop: string;
@@ -31,19 +32,18 @@ function FieldCheckboxGroup({
     <>
       {items.map((item: Lookup) => (
         <div className="form-check" key={item.value}>
-          <input
-            className="form-check-input"
+          <FieldCheckbox
             onChange={(e) => {
               checkBoxChange(e.target.value, e.target.checked);
             }}
-            type="checkbox"
-            name={prop}
             checked={value.includes(item.value)}
             value={item.value}
-          />
-          <label className="form-check-label" htmlFor={"skills_" + item.value}>
-            {item.label}
-          </label>
+          >
+             <label className="form-check-label" htmlFor={"skills_" + item.value}>
+              {item.label}
+            </label>
+          </FieldCheckbox>
+         
         </div>
       ))}
     </>
