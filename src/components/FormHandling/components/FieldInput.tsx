@@ -9,7 +9,7 @@ function FieldInput(props: TypeInputProps) {
     (e: React.ChangeEvent<HTMLInputElement>) => {
       props.onChange(props.prop, e.target.value);
     },
-    [props.prop, props.onChange]
+    [props]
   );
   return (
     <input
